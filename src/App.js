@@ -10,6 +10,7 @@ import { Route } from 'react-router-dom';
 import Header from './component/Header/Header';
 import FriendDetail from './component/FriendDetail/FriendDetail';
 import Culture from './component/Culture/Culture';
+import PostDetail from './component/PostDetail/PostDetail';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           <Router exact path="/about/culture">
             <Culture></Culture>
           </Router>
+          <Route path="/post/:postId">
+            <PostDetail></PostDetail>
+          </Route>
           <Route path='*'>
             <NotFound></NotFound>
           </Route>
